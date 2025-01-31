@@ -8,4 +8,6 @@ COPY install_cudatoolkit.sh /setup_scripts/
 RUN chmod +x /setup_scripts/*.sh
 RUN /setup_scripts/install_cudatoolkit.sh
 
+RUN uv pip install cuml-cu12
+
 CMD ["python3"]
