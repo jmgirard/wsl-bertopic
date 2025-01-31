@@ -9,6 +9,13 @@ Usage:
 3. On Windows, install the latest version of Docker Desktop: https://www.docker.com/products/docker-desktop/
 4. Open Docker Desktop and ensure that it is running
 5. Open the Windows Terminal (e.g., PowerShell)
-6. In the Terminal, type `docker pull jmgirard/wsl-bertopic`
-7. In the Terminal, type `docker run --gpus all -it jmgirard/wsl-bertopic`
-8. The Python terminal will appear and you can import and use BERTopic
+6. [Option 1] Build image from source
+    + On Windows, install the latest version of git: https://git-scm.com/downloads/win
+    + In the Terminal, navigate to whatever folder you want using `cd`
+    + In the Terminal, type `git clone https://github.com/jmgirard/wsl-bertopic`
+    + In the Terminal, type `cd wsl-bertopic`
+    + In the Terminal, type `docker build -t jmgirard/wsl-bertopic .`
+7. [Option 2] Pull image from Dockerhub
+    + In the Terminal, type `docker pull jmgirard/wsl-bertopic`
+8. In the Terminal, type `docker run --gpus all -it jmgirard/wsl-bertopic`
+9. The Python terminal will appear and you can import and use BERTopic
